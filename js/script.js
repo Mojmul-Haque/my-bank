@@ -1,12 +1,11 @@
 // login event listern add
-const transictionArea = document.getElementById('transiction_area');
-transictionArea.style.display = 'none';
 
 const loginButton = document.getElementById('login_btn');
 
 loginButton.addEventListener('click', function() {
     const loginArea = document.getElementById('login_area');
     loginArea.style.display = 'none'
+    const transictionArea = document.getElementById('transiction_area');
     transictionArea.style.display = 'block'
 })
 
