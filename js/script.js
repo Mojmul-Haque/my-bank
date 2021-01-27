@@ -17,16 +17,20 @@ depositBtn.addEventListener('click', function() {
     const inputDeposit = document.getElementById('input_deposit').value;
     const inputDepositNumber = parseFloat(inputDeposit);
     // update span innerText
-    const dipositAmount = document.getElementById('diposit_amount').innerText;
-    const depositAmountNumber = parseFloat(dipositAmount);
 
+    document.getElementById('input_deposit').value = ''
 
-    // total deposit 
-    const totalDepositAmount = inputDepositNumber + depositAmountNumber
-
-    //update span finished here
-    document.getElementById('diposit_amount').innerText = totalDepositAmount;
-    console.log('update span = ',
-        totalDepositAmount)
-
+    // update diposit balance
+    spanUpdate('diposit_amount', inputDepositNumber)
+        // update currentBlance
+    spanUpdate('current_balance', inputDepositNumber)
 })
+
+function spanUpdate(id, inputNumber) {
+    const getSpanValue = document.getElementById(id).innerText;
+    const getSpanNumber = parseFloat(getSpanValue);
+
+    const currentTotal = getSpanNumber + inputNumber;
+
+    document.getElementById(id).innerText = currentTotal;
+}
