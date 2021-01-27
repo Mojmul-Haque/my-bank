@@ -14,9 +14,8 @@ loginButton.addEventListener('click', function() {
 
 const depositBtn = document.getElementById('deposit_btn');
 depositBtn.addEventListener('click', function() {
-    const inputDeposit = document.getElementById('input_deposit').value;
-    const inputDepositNumber = parseFloat(inputDeposit);
-    // update span innerText
+
+    const inputDepositNumber = getInput('input_deposit')
 
     document.getElementById('input_deposit').value = ''
 
@@ -36,9 +35,9 @@ function spanUpdate(id, inputNumber) {
 }
 
 function getInput(id) {
-    const inputDeposit = document.getElementById(id).value;
-    const inputDepositNumber = parseFloat(inputDeposit);
-    return inputDepositNumber;
+    const inputValue = document.getElementById(id).value;
+    const inputValueNumber = parseFloat(inputValue);
+    return inputValueNumber;
 }
 
 
