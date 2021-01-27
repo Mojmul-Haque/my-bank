@@ -34,3 +34,22 @@ function spanUpdate(id, inputNumber) {
 
     document.getElementById(id).innerText = currentTotal;
 }
+
+function getInput(id) {
+    const inputDeposit = document.getElementById(id).value;
+    const inputDepositNumber = parseFloat(inputDeposit);
+    return inputDepositNumber;
+}
+
+
+//start Withdraw btn enventListener
+
+const withdrawBtn = document.getElementById('withdraw_btn');
+withdrawBtn.addEventListener('click', function() {
+    const withDrawNumber = getInput('input_withdraw')
+    spanUpdate('withdraw_amount', withDrawNumber);
+    document.getElementById('input_withdraw').value = ''
+
+    spanUpdate('current_balance', -1 * withDrawNumber)
+
+})
