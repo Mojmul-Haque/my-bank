@@ -1,0 +1,16 @@
+.diposit {
+    background-color: slateblue;
+}
+
+.status {
+    padding: 30px;
+    margin: 0 40px;
+}
+
+.withdraw {
+    background: lightsalmon;
+}
+
+.balance {
+    background: tomato;
+}
