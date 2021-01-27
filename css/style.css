@@ -1,3 +1,7 @@
+.transictionArea {
+    display: none;
+}
+
 .diposit {
     background-color: slateblue;
 }
