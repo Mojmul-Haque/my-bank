@@ -45,6 +45,7 @@ function getInput(id) {
 
 const withdrawBtn = document.getElementById('withdraw_btn');
 withdrawBtn.addEventListener('click', function() {
+
     const withDrawNumber = getInput('input_withdraw')
     spanUpdate('withdraw_amount', withDrawNumber);
     document.getElementById('input_withdraw').value = ''
